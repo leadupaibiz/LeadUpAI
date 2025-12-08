@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Twitter, Linkedin, Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -7,10 +7,17 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4 text-white">
-              <Zap size={24} fill="currentColor" className="text-primary-500" />
-              <span className="font-bold text-xl">LeadUpAI</span>
-            </div>
+            <a href="#" className="inline-flex items-center gap-3 mb-6 bg-white rounded-xl p-3 hover:bg-slate-50 transition-colors">
+              <img 
+                src="https://raw.githubusercontent.com/leadupaibiz/LeadUpAI/main/logo.png" 
+                alt="LeadUpAI" 
+                className="h-12 w-auto object-contain rounded-lg"
+              />
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-slate-900 leading-none">LeadUpAI.in</span>
+                <span className="text-xs text-slate-500 font-medium mt-1">Lead up with AI</span>
+              </div>
+            </a>
             <p className="text-slate-400 max-w-sm mb-6">
               Empowering small businesses with enterprise-grade AI automation. Find leads, follow up instantly, and grow revenue on autopilot.
             </p>

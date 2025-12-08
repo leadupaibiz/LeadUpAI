@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 import { Button } from './ui/Button';
 
@@ -16,15 +16,20 @@ export const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="flex items-center gap-2 group">
-              <div className="bg-primary-600 text-white p-1.5 rounded-lg group-hover:bg-primary-700 transition-colors">
-                <Zap size={20} fill="currentColor" />
+            <a href="#" className="flex items-center gap-3 md:gap-4 group">
+              <img
+                src="https://raw.githubusercontent.com/leadupaibiz/LeadUpAI/main/logo.png"
+                alt="LeadUpAI Logo"
+                className="h-24 md:h-32 w-auto object-contain"
+              />
+              <div className="flex flex-col justify-center">
+                <span className="text-xl md:text-2xl font-bold text-slate-900 leading-tight">LeadUpAI.in</span>
+                <span className="text-sm md:text-base text-slate-500 font-medium">Lead up with AI</span>
               </div>
-              <span className="font-bold text-xl text-slate-900 tracking-tight">LeadUpAI</span>
             </a>
           </div>
 
@@ -45,10 +50,10 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-600 hover:text-slate-900 focus:outline-none"
+              className="text-slate-600 hover:text-slate-900 focus:outline-none p-2"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

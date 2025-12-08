@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
           
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 tracking-tight mb-8 leading-[1.1]">
             Turn Cold Leads into <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-500">
+            <span className="relative inline-block px-4 py-2 mx-2 my-2 md:my-0 bg-primary-600 text-white transform -rotate-2 rounded-lg shadow-xl shadow-primary-600/20">
               Loyal Clients
             </span> Automatically
           </h1>
